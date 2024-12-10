@@ -16,13 +16,15 @@ In the `solve_g(Z, B, l, w)` function, we return 𝑔, the log exposure correspo
 
 Here are example plots of g_red, g_green, g_blue, and all of them combined (log exposure vs. pixel value):
 
-<img width="321" src="https://github.com/user-attachments/assets/f788a524-0fd3-407a-aa8a-6de6955c6864"> <img width="321" alt="Screenshot 2024-12-10 at 10 21 34 AM" src="https://github.com/user-attachments/assets/f788a524-0fd3-407a-aa8a-6de6955c6864"> <img width="321" alt="Screenshot 2024-12-10 at 10 21 34 AM" src="https://github.com/user-attachments/assets/f788a524-0fd3-407a-aa8a-6de6955c6864"> <img width="321" alt="Screenshot 2024-12-10 at 10 21 34 AM" src="https://github.com/user-attachments/assets/f788a524-0fd3-407a-aa8a-6de6955c6864">
+
 
 After solving for g, I used function `hdr(file_names, g_red, g_green, g_blue, w, exposure_matrix, nr_exposures)`, which takes in the exposure stack image filenames, response function g for all three color channels, the weighting function value, exposure matrix, and number of images / exposures to return the HDR radiance map. We follow the following equation from Durand 2002.
 
 <img width="321" alt="Screenshot 2024-12-10 at 10 21 34 AM" src="https://github.com/user-attachments/assets/f788a524-0fd3-407a-aa8a-6de6955c6864">
 
 After writing these two functions, we can successfully obtain HDR radiance maps for input images. Below is an example of the HDR image on an HDR radiance map (mean of channels) and HDR radiance map on the arch.
+
+<img width="321" src="hdr_radiance_map_mean.png">  <img width="321" src="hdr_radiance_map.png">
 
 ## 2. Tone Mapping
 
