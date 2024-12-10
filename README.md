@@ -100,9 +100,9 @@ I implemented this algorithm on my own images!
 
 Here are the original images of varying exposures (from low to high), as well as the resulting images:
 
-<img width="250" src="1_2.jpg"> <img width="250" src="1_4.jpg"> <img width="250" src="1_8.jpg"> <img width="250" src="1_16.jpg"> <img width="250" src="1_32.jpg">
+<img width="300" src="1_2.jpg"> <img width="300" src="1_4.jpg"> <img width="300" src="1_8.jpg"> <img width="300" src="1_16.jpg"> <img width="300" src="1_32.jpg">
 
-<img width="400" src="g_cam.png">
+<img width="300" src="g_cam.png">
 
 | HDR Radiance Map (mean of channels) | HDR Radiance Map |
 |:----------------------------------------|:---------------------|
