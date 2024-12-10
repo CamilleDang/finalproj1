@@ -16,7 +16,7 @@ In the `solve_g(Z, B, l, w)` function, we return 𝑔, the log exposure correspo
 
 Here are example plots of g_red, g_green, g_blue, and all of them combined (log exposure vs. pixel value):
 
-
+<img width="400" src="g_arch.png">
 
 After solving for g, I used function `hdr(file_names, g_red, g_green, g_blue, w, exposure_matrix, nr_exposures)`, which takes in the exposure stack image filenames, response function g for all three color channels, the weighting function value, exposure matrix, and number of images / exposures to return the HDR radiance map. We follow the following equation from Durand 2002.
 
@@ -24,7 +24,7 @@ After solving for g, I used function `hdr(file_names, g_red, g_green, g_blue, w,
 
 After writing these two functions, we can successfully obtain HDR radiance maps for input images. Below is an example of the HDR image on an HDR radiance map (mean of channels) and HDR radiance map on the arch.
 
-| **HDR Radiance Map (mean of channels)** | **HDR Radiance Map** |
+| HDR Radiance Map (mean of channels) | HDR Radiance Map |
 |:----------------------------------------|:---------------------|
 | <img width="321" src="hdr_radiance_map_mean.png"> | <img width="321" src="hdr_radiance_map.png">|
 
@@ -46,11 +46,47 @@ I then implemented a local method following the Durand paper for a more effectiv
 
 These were my results for the original set of arch images:
 
-
+| Global Scale | Global Simple | Global Simple |
+|:----------------------------------------|:---------------------|:---------------------|
+| <img width="321" src="global_scale.png"> | <img width="321" src="global_simple.png">| <img width="321" src="durand.png">|
 
 Here are more results for other sets of images (bonsai, chapel, garage):
 
+**Bonsai!**
 
+<img width="400" src="g_bonsai.png">
+
+| HDR Radiance Map (mean of channels) | HDR Radiance Map |
+|:----------------------------------------|:---------------------|
+| <img width="321" src="hdr_radiance_map_mean_bonsai.png"> | <img width="321" src="hdr_radiance_map_bonsai.png">|
+
+| Global Scale | Global Simple | Global Simple |
+|:----------------------------------------|:---------------------|:---------------------|
+| <img width="321" src="global_scale_bonsai.png"> | <img width="321" src="global_simple_bonsai.png">| <img width="321" src="durand_bonsai.png">|
+
+**Chapel**
+
+<img width="400" src="g_chapel.png">
+
+| HDR Radiance Map (mean of channels) | HDR Radiance Map |
+|:----------------------------------------|:---------------------|
+| <img width="321" src="hdr_radiance_map_mean_chapel.png"> | <img width="321" src="hdr_radiance_map_chapel.png">|
+
+| Global Scale | Global Simple | Global Simple |
+|:----------------------------------------|:---------------------|:---------------------|
+| <img width="321" src="global_scale_chapel.png"> | <img width="321" src="global_simple_chapel.png">| <img width="321" src="durand_chapel.png">|
+
+**Garage**
+
+<img width="400" src="g_garage.png">
+
+| HDR Radiance Map (mean of channels) | HDR Radiance Map |
+|:----------------------------------------|:---------------------|
+| <img width="321" src="hdr_radiance_map_mean_garage.png"> | <img width="321" src="hdr_radiance_map_garage.png">|
+
+| Global Scale | Global Simple | Global Simple |
+|:----------------------------------------|:---------------------|:---------------------|
+| <img width="321" src="global_scale_garage.png"> | <img width="321" src="global_simple_garage.png">| <img width="321" src="durand_garage.png">|
 
 ## Bells & Whistles
 
@@ -58,8 +94,7 @@ I implemented this algorithm on my own images!
 
 Here are the original images of varying exposures (from low to high), as well as the resulting images:
 
-
-
+<img width="250" src="1_2.jpg"> <img width="250" src="1_4.jpg"> <img width="250" src="1_8.jpg"> <img width="250" src="1_16.jpg"> <img width="250" src="1_32.jpg">
 
 # Project 2: Light Field Camera - Depth Refocusing and Aperture Adjustment with Light Field Data
 
