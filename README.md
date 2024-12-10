@@ -26,7 +26,7 @@ After writing these two functions, we can successfully obtain HDR radiance maps 
 
 | **HDR Radiance Map (mean of channels)** | **HDR Radiance Map** |
 |:----------------------------------------|:---------------------|
-<img width="321" src="hdr_radiance_map_mean.png">  <img width="321" src="hdr_radiance_map.png">
+| <img width="321" src="hdr_radiance_map_mean.png"> | <img width="321" src="hdr_radiance_map.png">|
 
 ## 2. Tone Mapping
 
