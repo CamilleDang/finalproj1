@@ -72,13 +72,13 @@ Tone Mapping
 
 | HDR Radiance Map (mean of channels) | HDR Radiance Map |
 |:----------------------------------------|:---------------------|
-| <img width="321" src="hdr_radiance_map_mean_chapel.png"> | <img width="321" src="hdr_radiance_map_chapel.png">|
+| <img width="200" src="hdr_radiance_map_mean_chapel.png"> | <img width="200" src="hdr_radiance_map_chapel.png">|
 
 Tone Mapping
 
 | Global Scale | Global Simple | Durand |
 |:----------------------------------------|:---------------------|:---------------------|
-| <img width="321" src="global_scale_chapel.png"> | <img width="321" src="global_simple_chapel.png">| <img width="321" src="durand_chapel.png">|
+| <img width="200" src="global_scale_chapel.png"> | <img width="200" src="global_simple_chapel.png">| <img width="200" src="durand_chapel.png">|
 
 **Garage**
 
