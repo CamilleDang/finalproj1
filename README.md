@@ -114,6 +114,8 @@ Tone Mapping
 |:----------------------------------------|:---------------------|:---------------------|
 | <img width="321" src="global_scale_cam.png"> | <img width="321" src="global_simple_cam.png">| <img width="321" src="durand_cam.png">|
 
+I wanted to try HDR on an image with people, and the Durand algorithm still ended up looking pretty good! Like the other images, the Durand's tone mapped image comes out a bit washed out with slightly duller colors, but it is still a lot better representation of the image, especially in comparison to the global simple tone mapping.
+
 # Project 2: Light Field Camera - Depth Refocusing and Aperture Adjustment with Light Field Data
 
 ## Overview
