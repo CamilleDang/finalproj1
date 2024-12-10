@@ -24,8 +24,8 @@ After solving for g, I used function `hdr(file_names, g_red, g_green, g_blue, w,
 
 After writing these two functions, we can successfully obtain HDR radiance maps for input images. Below is an example of the HDR image on an HDR radiance map (mean of channels) and HDR radiance map on the arch.
 
-**HDR Radiance Map (mean of channels)** <span style="margin-left:20px;"></span> **HDR Radiance Map**
-
+| **HDR Radiance Map (mean of channels)** | **HDR Radiance Map** |
+|:----------------------------------------|:---------------------|
 <img width="321" src="hdr_radiance_map_mean.png">  <img width="321" src="hdr_radiance_map.png">
 
 ## 2. Tone Mapping
