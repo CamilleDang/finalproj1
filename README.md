@@ -46,7 +46,7 @@ I then implemented a local method following the Durand paper for a more effectiv
 
 These were my results for the original set of arch images:
 
-| Global Scale | Global Simple | Global Simple |
+| Global Scale | Global Simple | Durand |
 |:----------------------------------------|:---------------------|:---------------------|
 | <img width="321" src="global_scale.png"> | <img width="321" src="global_simple.png">| <img width="321" src="durand.png">|
 
@@ -62,7 +62,7 @@ Here are more results for other sets of images (bonsai, chapel, garage):
 
 Tone Mapping
 
-| Global Scale | Global Simple | Global Simple |
+| Global Scale | Global Simple | Durand |
 |:----------------------------------------|:---------------------|:---------------------|
 | <img width="321" src="global_scale_bonsai.png"> | <img width="321" src="global_simple_bonsai.png">| <img width="321" src="durand_bonsai.png">|
 
@@ -76,7 +76,7 @@ Tone Mapping
 
 Tone Mapping
 
-| Global Scale | Global Simple | Global Simple |
+| Global Scale | Global Simple | Durand |
 |:----------------------------------------|:---------------------|:---------------------|
 | <img width="321" src="global_scale_chapel.png"> | <img width="321" src="global_simple_chapel.png">| <img width="321" src="durand_chapel.png">|
 
@@ -90,7 +90,7 @@ Tone Mapping
 
 Tone Mapping
 
-| Global Scale | Global Simple | Global Simple |
+| Global Scale | Global Simple | Durand |
 |:----------------------------------------|:---------------------|:---------------------|
 | <img width="321" src="global_scale_garage.png"> | <img width="321" src="global_simple_garage.png">| <img width="321" src="durand_garage.png">|
 
@@ -110,11 +110,11 @@ Here are the original images of varying exposures (from low to high), as well as
 
 Tone Mapping
 
-| Global Scale | Global Simple | Global Simple |
+| Global Scale | Global Simple | Durand |
 |:----------------------------------------|:---------------------|:---------------------|
 | <img width="321" src="global_scale_cam.png"> | <img width="321" src="global_simple_cam.png">| <img width="321" src="durand_cam.png">|
 
-I wanted to try HDR on an image with people, and the Durand algorithm still ended up looking pretty good! Like the other images, the Durand's tone mapped image comes out a bit washed out with slightly duller colors, but it is still a lot better representation of the image, especially in comparison to the global simple tone mapping.
+I wanted to try HDR on an image with people, and the Durand algorithm still ended up looking pretty good! Like the other images, the Durand's tone mapped image comes out a bit washed out with slightly duller colors, but it is still a lot better representation of the image, especially in comparison to the global simple tone mapping. In my opinion, out of all the examples, this result was one of the better ones!
 
 # Project 2: Light Field Camera - Depth Refocusing and Aperture Adjustment with Light Field Data
 
