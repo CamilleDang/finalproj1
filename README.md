@@ -1,4 +1,4 @@
-<img width="321" alt="Screenshot 2024-12-10 at 10 21 34 AM" src="https://github.com/user-attachments/assets/f788a524-0fd3-407a-aa8a-6de6955c6864"># CS 180: Final Project
+# CS 180: Final Project
 
 # Project 1: High Dynamic Range
 
@@ -12,11 +12,15 @@ The input images are digitized photographs taken from the same vantage point wit
 
 In this equation, 𝑍𝑖𝑗 and Δ𝑡𝑗 are knowns while 𝑔 and 𝐸𝑖 are unknowns. We do know that the scene remains unchanged across the image sequence, which allows us to assume that 𝐸𝑖 is constant for each pixel across images.
 
-In the `solve_g(Z, B, l, w)` function, we return 𝑔, the log exposure corresponding to pixel value z (where z is between 0 - 255), and lE, the log film irradiance at each pixel location 𝑖. I used least squares to solve for g and L, using the known values of 𝑍𝑖𝑗, also taking into account weighting of pixel contributions, . We also have to ensure the smoothness of 𝑔 by incorporating a constraint based on its second derivative, 
+In the `solve_g(Z, B, l, w)` function, we return 𝑔, the log exposure corresponding to pixel value z (where z is between 0 - 255), and lE, the log film irradiance at each pixel location 𝑖. I used least squares to solve for g and L, using the known values of 𝑍𝑖𝑗, also taking into account weighting of pixel contributions becuase pixels that are too dark or too bright may be heavily influenced by noise or saturation. Additionally, we have to ensure the smoothness of 𝑔 by incorporating a constraint based on its second derivative.
 
-Weighting of Pixel Contributions: Not all pixels provide reliable data; pixels that are too dark or too bright may be heavily influenced by noise or saturation. To refine our estimates of 𝐸𝑖, we use the w weighting function to ensure that each pixel's contribution is weighted. 
+Here are example plots of g_red, g_green, g_blue, and all of them combined (log exposure vs. pixel value):
+
+<img width="321" src="https://github.com/user-attachments/assets/f788a524-0fd3-407a-aa8a-6de6955c6864"> <img width="321" alt="Screenshot 2024-12-10 at 10 21 34 AM" src="https://github.com/user-attachments/assets/f788a524-0fd3-407a-aa8a-6de6955c6864"> <img width="321" alt="Screenshot 2024-12-10 at 10 21 34 AM" src="https://github.com/user-attachments/assets/f788a524-0fd3-407a-aa8a-6de6955c6864"> <img width="321" alt="Screenshot 2024-12-10 at 10 21 34 AM" src="https://github.com/user-attachments/assets/f788a524-0fd3-407a-aa8a-6de6955c6864">
 
 After solving for g, I used function `hdr(file_names, g_red, g_green, g_blue, w, exposure_matrix, nr_exposures)`, which takes in the exposure stack image filenames, response function g for all three color channels, the weighting function value, exposure matrix, and number of images / exposures to return the HDR radiance map. We follow the following equation from Durand 2002.
+
+<img width="321" alt="Screenshot 2024-12-10 at 10 21 34 AM" src="https://github.com/user-attachments/assets/f788a524-0fd3-407a-aa8a-6de6955c6864">
 
 After writing these two functions, we can successfully obtain HDR radiance maps for input images. Below is an example of the HDR image on an HDR radiance map (mean of channels) and HDR radiance map on the arch.
 
@@ -61,7 +65,7 @@ Shown in the paper [Light Field Photography with a Hand-held Plenoptic Camera](h
 
 ## 1. Depth Refocusing
 
-In the first part of this project, I simulated a camera focusing at different depths using all the grid images. Objects that are far away from the camera don't change in position significantly when the camera moves around, but nearby objects vary their position significantly. If we simply average all the images in the grid without shifting, the image will be blurry around nearby objects and sharp around far-away objects. We thus shift the images "appropriately" -- I wrote a shift function with the signature function `shift_images(data, ap, C, mid, order)`, using 
+In the first part of this project, I simulated a camera focusing at different depths using all the grid images. Objects that are far away from the camera don't change in position significantly when the camera moves around, but nearby objects vary their position significantly. If we simply average all the images in the grid without shifting, the image will be blurry around nearby objects and sharp around far-away objects. We thus shift the images "appropriately" -- I wrote a shift function with the signature function `shift_images(data, C, mid, order)`, using 
 
 The objects which are far away from the camera do not vary their position significantly when the camera moves around while keeping the optical axis direction unchanged. The nearby objects, on the other hand, vary their position significantly across images. Averaging all the images in the grid without any shifting will produce an image which is sharp around the far-away objects but blurry around the nearby ones. Similarly, shifting the images 'appropriately' and then averaging allows one to focus on object at different depths.
 
@@ -69,6 +73,6 @@ In this part of the project, you will implement this idea to generate multiple i
 
 ## 2. Aperture Adjustment
 
-In order to simulate a camera 
+In order to simulate a camera of different apertures focusing on a common point, I adjusted my `shift_images(data, C, mid, order)` to include an aperture component `shift_images(data, ap, C, mid, order)` 
 
-we can also follow similar logic 
+Examples of 
