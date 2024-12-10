@@ -60,6 +60,8 @@ Here are more results for other sets of images (bonsai, chapel, garage):
 |:----------------------------------------|:---------------------|
 | <img width="321" src="hdr_radiance_map_mean_bonsai.png"> | <img width="321" src="hdr_radiance_map_bonsai.png">|
 
+Tone Mapping
+
 | Global Scale | Global Simple | Global Simple |
 |:----------------------------------------|:---------------------|:---------------------|
 | <img width="321" src="global_scale_bonsai.png"> | <img width="321" src="global_simple_bonsai.png">| <img width="321" src="durand_bonsai.png">|
@@ -71,6 +73,8 @@ Here are more results for other sets of images (bonsai, chapel, garage):
 | HDR Radiance Map (mean of channels) | HDR Radiance Map |
 |:----------------------------------------|:---------------------|
 | <img width="321" src="hdr_radiance_map_mean_chapel.png"> | <img width="321" src="hdr_radiance_map_chapel.png">|
+
+Tone Mapping
 
 | Global Scale | Global Simple | Global Simple |
 |:----------------------------------------|:---------------------|:---------------------|
@@ -84,6 +88,8 @@ Here are more results for other sets of images (bonsai, chapel, garage):
 |:----------------------------------------|:---------------------|
 | <img width="321" src="hdr_radiance_map_mean_garage.png"> | <img width="321" src="hdr_radiance_map_garage.png">|
 
+Tone Mapping
+
 | Global Scale | Global Simple | Global Simple |
 |:----------------------------------------|:---------------------|:---------------------|
 | <img width="321" src="global_scale_garage.png"> | <img width="321" src="global_simple_garage.png">| <img width="321" src="durand_garage.png">|
@@ -95,6 +101,18 @@ I implemented this algorithm on my own images!
 Here are the original images of varying exposures (from low to high), as well as the resulting images:
 
 <img width="250" src="1_2.jpg"> <img width="250" src="1_4.jpg"> <img width="250" src="1_8.jpg"> <img width="250" src="1_16.jpg"> <img width="250" src="1_32.jpg">
+
+<img width="400" src="g_cam.png">
+
+| HDR Radiance Map (mean of channels) | HDR Radiance Map |
+|:----------------------------------------|:---------------------|
+| <img width="321" src="hdr_radiance_map_mean_cam.png"> | <img width="321" src="hdr_radiance_map_cam.png">|
+
+Tone Mapping
+
+| Global Scale | Global Simple | Global Simple |
+|:----------------------------------------|:---------------------|:---------------------|
+| <img width="321" src="global_scale_cam.png"> | <img width="321" src="global_simple_cam.png">| <img width="321" src="durand_cam.png">|
 
 # Project 2: Light Field Camera - Depth Refocusing and Aperture Adjustment with Light Field Data
 
