@@ -56,7 +56,7 @@ These were my Durand results (as well as some in-between steps: the bilateral fi
 
 Here are more results for other sets of images (bonsai, chapel, garage):
 
-**Bonsai!**
+**Example 1: Bonsai!**
 
 <img width="400" src="g_bonsai.png">
 
@@ -74,7 +74,7 @@ Tone Mapping
 |:----------------------------------------|:---------------------|:---------------------|
 | <img width="321" src="global_scale_bonsai.png"> | <img width="321" src="global_simple_bonsai.png">| <img width="321" src="durand_bonsai.png">|
 
-**Chapel**
+**Example 2: Chapel**
 
 <img width="400" src="g_chapel.png">
 
@@ -86,13 +86,13 @@ Tone Mapping
 
 | Bilateral Filtered Image | High-Frequency Details |
 |:----------------------------------------|:---------------------|
-| <img width="321" src="bf_chapel.png"> | <img width="321" src="detail_chapel.png">|
+| <img width="200" src="bf_chapel.png"> | <img width="200" src="detail_chapel.png">|
 
 | Global Scale | Global Simple | Durand |
 |:----------------------------------------|:---------------------|:---------------------|
 | <img width="200" src="global_scale_chapel.png"> | <img width="200" src="global_simple_chapel.png">| <img width="200" src="durand_chapel.png">|
 
-**Garage**
+**Example 3: Garage**
 
 <img width="400" src="g_garage.png">
 
