@@ -52,7 +52,7 @@ These were my Durand results (as well as some in-between steps: the bilateral fi
 
 | Global Scale | Global Simple | Durand |
 |:----------------------------------------|:---------------------|:---------------------|
-| <img width="321" src="global_scale.png"> | <img width="321" src="global_simple.png">| <img width="321" src="durand.png">|
+| <img width="321" src="global_scale.png"> | <img width="321" src="global_simple_arch2.png">| <img width="321" src="durand.png">|
 
 Here are more results for other sets of images (bonsai, chapel, garage):
 
@@ -72,7 +72,7 @@ Tone Mapping
 
 | Global Scale | Global Simple | Durand |
 |:----------------------------------------|:---------------------|:---------------------|
-| <img width="321" src="global_scale_bonsai.png"> | <img width="321" src="global_simple_bonsai.png">| <img width="321" src="durand_bonsai.png">|
+| <img width="321" src="global_scale_bonsai.png"> | <img width="321" src="global_simple_bonsai2.png">| <img width="321" src="durand_bonsai.png">|
 
 **Example 2: Chapel**
 
@@ -90,7 +90,7 @@ Tone Mapping
 
 | Global Scale | Global Simple | Durand |
 |:----------------------------------------|:---------------------|:---------------------|
-| <img width="200" src="global_scale_chapel.png"> | <img width="200" src="global_simple_chapel.png">| <img width="200" src="durand_chapel.png">|
+| <img width="200" src="global_scale_chapel.png"> | <img width="200" src="global_simple_chapel2.png">| <img width="200" src="durand_chapel.png">|
 
 **Example 3: Garage**
 
@@ -108,7 +108,7 @@ Tone Mapping
 
 | Global Scale | Global Simple | Durand |
 |:----------------------------------------|:---------------------|:---------------------|
-| <img width="321" src="global_scale_garage.png"> | <img width="321" src="global_simple_garage.png">| <img width="321" src="durand_garage.png">|
+| <img width="321" src="global_scale_garage.png"> | <img width="321" src="global_simple_garage2.png">| <img width="321" src="durand_garage.png">|
 
 ## Bells & Whistles
 
