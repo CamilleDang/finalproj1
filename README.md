@@ -98,7 +98,7 @@ Tone Mapping
 
 I implemented this algorithm on my own images! 
 
-Here are the original images of varying exposures (from low to high), as well as the resulting images:
+Here are the original images of varying exposures (from high to low), as well as the resulting images:
 
 <img width="300" src="1_2.jpg"> <img width="300" src="1_4.jpg"> <img width="300" src="1_8.jpg"> <img width="300" src="1_16.jpg"> <img width="300" src="1_32.jpg">
 
@@ -124,14 +124,36 @@ Shown in the paper [Light Field Photography with a Hand-held Plenoptic Camera](h
 
 ## 1. Depth Refocusing
 
-In the first part of this project, I simulated a camera focusing at different depths using all the grid images. Objects that are far away from the camera don't change in position significantly when the camera moves around, but nearby objects vary their position significantly. If we simply average all the images in the grid without shifting, the image will be blurry around nearby objects and sharp around far-away objects. We thus shift the images "appropriately" -- I wrote a shift function with the signature function `shift_images(data, C, mid, order)`, using 
+In the first part of this project, I simulated a camera focusing at different depths using all the grid images. Objects that are far away from the camera don't change in position significantly when the camera moves around, but nearby objects vary their position significantly. If we simply average all the images in the grid without shifting, the image will be blurry around nearby objects and sharp around far-away objects. We thus shift the images "appropriately" -- I wrote a shift function with the signature function `shift_images(data, C, mid, order)`.
 
-The objects which are far away from the camera do not vary their position significantly when the camera moves around while keeping the optical axis direction unchanged. The nearby objects, on the other hand, vary their position significantly across images. Averaging all the images in the grid without any shifting will produce an image which is sharp around the far-away objects but blurry around the nearby ones. Similarly, shifting the images 'appropriately' and then averaging allows one to focus on object at different depths.
+I then shifted all the images and averaged them.
 
-In this part of the project, you will implement this idea to generate multiple images which focus at different depths. To get the best effects, you should use all the grid images for averaging. The effects should be similar to what you observe when you change the depth of focus 
+Some examples of the camera focusing at different depths:
+
+<img width="321" src="durand_cam.png"> <img width="321" src="durand_cam.png"> <img width="321" src="durand_cam.png"> <img width="321" src="durand_cam.png"> <img width="321" src="durand_cam.png"> <img width="321" src="durand_cam.png"> <img width="321" src="durand_cam.png">
+
+I made a GIF of this image with the camera changing depths.
+
+<img width="321" src="durand_cam.png">
 
 ## 2. Aperture Adjustment
 
-In order to simulate a camera of different apertures focusing on a common point, I adjusted my `shift_images(data, C, mid, order)` to include an aperture component `shift_images(data, ap, C, mid, order)` 
+In order to simulate a camera of different apertures focusing on a common point, I adjusted my `shift_images(data, C, mid, order)` to include an aperture component `shift_images(data, ap, C, mid, order)`, 
 
-Examples of 
+I 
+
+Examples of the camera focusing on a common point at different apertures (lower to higher):
+
+<img width="321" src="durand_cam.png"> <img width="321" src="durand_cam.png"> <img width="321" src="durand_cam.png"> <img width="321" src="durand_cam.png"> <img width="321" src="durand_cam.png"> <img width="321" src="durand_cam.png"> <img width="321" src="durand_cam.png">
+
+Here is a GIF of the same image with increasing apertures:
+
+<img width="321" src="durand_cam.png">
+
+## Summary
+
+Throughout this project, I gained a deeper understanding of lightfield technology, which can enable people to capture visual information across multiple dimensions, unlike traditional photography. I thought the paper, written by Ren Ng et al. (professor at UC Berkeley!) was really cool and showed how capturing multiple images across a plane orthogonal to the optical axis can lead to powerful post-capture manipulations.
+
+For depth refocusing, I learned how the position of objects relative to the camera's movement affects their apparent position in captured images. Objects further from the camera show little positional change, while closer objects exhibit significant shifts, and for the aperture adjustment, I appreciated how light field technology can replicate and extend traditional camera settings post-capture.
+
+Overall, I appreciated learning more about the flexibility of light field cameras, which provide the ability to adjust focus and aperture settings post-capture, which opens up new possibilities for photographers and researchers, including in the fields of virtual reality, augmented reality, and advanced imaging systems.
