@@ -150,11 +150,11 @@ I then shifted all the images and averaged them.
 
 Some examples of the camera focusing at different depths:
 
-<img width="321" src="durand_cam.png"> <img width="321" src="durand_cam.png"> <img width="321" src="durand_cam.png"> <img width="321" src="durand_cam.png"> <img width="321" src="durand_cam.png"> <img width="321" src="durand_cam.png"> <img width="321" src="durand_cam.png">
+<img width="321" src="amethyst-0.30000000000000004.jpg"> <img width="321" src="amethyst-0.10000000000000009.jpg"> <img width="321" src="amethyst0.19999999999999984.jpg"> <img width="321" src="amethyst0.5999999999999996.jpg"> <img width="321" src="amethyst1.1999999999999997.jpg"> <img width="321" src="amethyst1.8999999999999995.jpg"> <img width="321" src="amethyst2.499999999999999.jpg">
 
 I made a GIF of this image with the camera changing depths.
 
-<img width="321" src="durand_cam.png">
+<img width="321" src="amethyst.gif">
 
 ## 2. Aperture Adjustment
 
@@ -164,11 +164,11 @@ I
 
 Examples of the camera focusing on a common point at different apertures (lower to higher):
 
-<img width="321" src="amethyst-0.30000000000000004.jpg"> <img width="321" src="amethyst-0.10000000000000009.jpg"> <img width="321" src="amethyst0.19999999999999984.jpg"> <img width="321" src="amethyst0.5999999999999996.jpg"> <img width="321" src="amethyst1.1999999999999997.jpg"> <img width="321" src="amethyst1.8999999999999995.jpg"> <img width="321" src="amethyst2.499999999999999.jpg">
+<img width="321" src="amethyst_apt1.jpg"> <img width="321" src="amethyst_apt3.jpg"> <img width="321" src="amethyst_apt6.jpg"> <img width="321" src="amethyst_apt8.jpg"> <img width="321" src="amethyst_apt10.jpg"> <img width="321" src="amethyst_apt13.jpg"><img width="321" src="amethyst_apt16.jpg">
 
 Here is a GIF of the same image with increasing apertures:
 
-<img width="321" src="amethyst_apt1.jpg"> <img width="321" src="amethyst_apt3.jpg"> <img width="321" src="amethyst_apt6.jpg"> <img width="321" src="amethyst_apt8.jpg"> <img width="321" src="amethyst_apt10.jpg"> <img width="321" src="amethyst_apt13.jpg"><img width="321" src="amethyst_apt16.jpg">
+<img width="321" src="amethyst_apt.gif">
 
 ## Summary
 
