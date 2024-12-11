@@ -44,7 +44,11 @@ I then implemented a local method following the Durand paper for a more effectiv
 9. Put back the colors: R',G',B' = O * (R/I, G/I, B/I)
 10. Apply gamma compression so that the result doesn't look too dark. I used a gamma value of 0.5
 
-These were my results for the original set of arch images:
+These were my Durand results (as well as some in-between steps: the bilateral filtered image & details) for the original set of arch images:
+
+| Bilateral Filtered Image | High-Frequency Details |
+|:----------------------------------------|:---------------------|
+| <img width="321" src="bf_arch.png"> | <img width="321" src="detail_arch.png">|
 
 | Global Scale | Global Simple | Durand |
 |:----------------------------------------|:---------------------|:---------------------|
@@ -62,6 +66,10 @@ Here are more results for other sets of images (bonsai, chapel, garage):
 
 Tone Mapping
 
+| Bilateral Filtered Image | High-Frequency Details |
+|:----------------------------------------|:---------------------|
+| <img width="321" src="bf_bonsai.png"> | <img width="321" src="detail_bonsai.png">|
+
 | Global Scale | Global Simple | Durand |
 |:----------------------------------------|:---------------------|:---------------------|
 | <img width="321" src="global_scale_bonsai.png"> | <img width="321" src="global_simple_bonsai.png">| <img width="321" src="durand_bonsai.png">|
@@ -76,6 +84,10 @@ Tone Mapping
 
 Tone Mapping
 
+| Bilateral Filtered Image | High-Frequency Details |
+|:----------------------------------------|:---------------------|
+| <img width="321" src="bf_chapel.png"> | <img width="321" src="detail_chapel.png">|
+
 | Global Scale | Global Simple | Durand |
 |:----------------------------------------|:---------------------|:---------------------|
 | <img width="200" src="global_scale_chapel.png"> | <img width="200" src="global_simple_chapel.png">| <img width="200" src="durand_chapel.png">|
@@ -89,6 +101,10 @@ Tone Mapping
 | <img width="321" src="hdr_radiance_map_mean_garage.png"> | <img width="321" src="hdr_radiance_map_garage.png">|
 
 Tone Mapping
+
+| Bilateral Filtered Image | High-Frequency Details |
+|:----------------------------------------|:---------------------|
+| <img width="321" src="bf_garage.png"> | <img width="321" src="detail_garage.png">|
 
 | Global Scale | Global Simple | Durand |
 |:----------------------------------------|:---------------------|:---------------------|
@@ -109,6 +125,10 @@ Here are the original images of varying exposures (from high to low), as well as
 | <img width="321" src="hdr_radiance_map_mean_cam.png"> | <img width="321" src="hdr_radiance_map_cam.png">|
 
 Tone Mapping
+
+| Bilateral Filtered Image | High-Frequency Details |
+|:----------------------------------------|:---------------------|
+| <img width="321" src="bf_cam.png"> | <img width="321" src="detail_cam.png">|
 
 | Global Scale | Global Simple | Durand |
 |:----------------------------------------|:---------------------|:---------------------|
