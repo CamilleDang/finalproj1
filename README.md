@@ -146,6 +146,9 @@ Shown in the paper [Light Field Photography with a Hand-held Plenoptic Camera](h
 
 In the first part of this project, I simulated a camera focusing at different depths using all the grid images. Objects that are far away from the camera don't change in position significantly when the camera moves around, but nearby objects vary their position significantly. If we simply average all the images in the grid without shifting, the image will be blurry around nearby objects and sharp around far-away objects. We thus shift the images "appropriately" -- I wrote a shift function with the signature function `shift_images(data, C, mid, order)`.
 
+In this function, each image is converted from BGR to RGB color space to align with typical color processing standards. A spatial shift is calculated for each image based on its distance from the midpoint, scaled by the coefficient. This shift effectively mimics camera or object movement, allowing the viewer to refocus on different planes within the scene based on the shifted perspective.
+I used the scipy.ndimage.shift function to apply the calculated shift to the image.
+
 I then shifted all the images and averaged them.
 
 Some examples of the camera focusing at different depths:
@@ -160,7 +163,7 @@ I made a GIF of this image with the camera changing depths.
 
 In order to simulate a camera of different apertures focusing on a common point, I adjusted my `shift_images(data, C, mid, order)` to include an aperture component `shift_images(data, ap, C, mid, order)`, 
 
-I 
+The logic I added was adding to the for loop - for each image in the dataset, only images whose coordinates are within the defined aperture distance from the midpoint are considered for shifting. It calculates the horizontal and vertical distances (x_shift and y_shift) from the image's coordinates to the specified midpoint, which simulates the effect of an optical aperture, which limits the field of view to a specific region around the midpoint.
 
 Examples of the camera focusing on a common point at different apertures (lower to higher):
 
